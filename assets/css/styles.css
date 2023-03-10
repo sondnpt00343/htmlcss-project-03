@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-bg: #10375c;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -9,4 +13,67 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Sora", sans-serif;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    min-height: 100vh;
+    background: var(--header-bg);
+}
+
+.logo {
+    position: relative;
+    display: inline-flex;
+    font-size: 1rem;
+}
+
+.logo__circle::before,
+.logo__circle::after {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.logo__circle::before {
+    width: 3em;
+    height: 3em;
+    background: #2e80ce;
+}
+
+.logo__circle::after {
+    position: absolute;
+    top: 1.1em;
+    left: 1.1em;
+    width: 1.6em;
+    height: 1.6em;
+    background: #fff;
+}
+
+.logo__text {
+    margin-left: 0.6em;
+    text-align: right;
+    line-height: 1.6em;
+}
+
+.logo__brand {
+    display: block;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #fff;
+}
+
+.logo__brand--small {
+    font-size: 1.2em;
+    font-weight: 300;
 }
